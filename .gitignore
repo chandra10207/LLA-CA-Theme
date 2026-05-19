@@ -37,11 +37,13 @@ wp-config.php
 
  .DS_Store
  *.zip
- 
+
+
 # All plugins
 #
 # Note: If you wish to whitelist plugins,
 # uncomment the next line
+
 #/wp-content/plugins
 
 # All themes
