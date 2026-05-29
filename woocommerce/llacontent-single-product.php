@@ -51,7 +51,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="lla_mobile_images" style="width: 42%; float: left;">
 		<div class="image_removeonDesktop">
 			<!--<img src="https://www.livelifealarms.ca/wp-content/uploads/2019/04/mobile-medical-emergency-seniors-alarm-slider-reduced-507x332.jpg" alt="" title="mobile-medical-alarm-system-slider-3">-->
-			<img src="https://www.livelifealarms.ca/wp-content/uploads/2021/11/4G-live-life-alarms-emergency-medical-pendant-alarm-gps-seniors.jpg" alt="" title="mobile-medical-alarm-system-slider-3">
+			<img src="/wp-content/uploads/2026/05/4G-live-life-alarms-emergency-medical-pendant-alarm-gps-seniors-2026.webp" alt="" title="mobile-medical-alarm-system-slider-3">
 		</div>
 		
 		<div id="slider" class="fusion-flexslider slider_removeonMobile">
