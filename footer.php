@@ -145,7 +145,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( is_page( 844 ) ) {
     get_template_part( 'template-parts/form-maker');
 }
-?>		
+?>	
+
+ <?php 
+if (
+is_checkout()
+) { ?>
+<script defer type="text/javascript"
+    src="<?php echo get_stylesheet_directory_uri() . '/js/checkout-address.js' ?>?ver=<?php echo wp_get_theme()->get('Version') ?>"
+    id="lla-checkout-address-custom-js"></script><?php } 
+
+ ?>
+
+
 		
 	</body>
 </html>

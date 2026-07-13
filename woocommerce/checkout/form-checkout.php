@@ -29,16 +29,34 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 ?>
 
 <?php do_action( 'woocommerce_before_cart' ); ?>
+<div class="aa" style="display: block; overflow: hidden;">
 
+<a href="/cart/" class="button wc-forward" style="margin-bottom: 20px;">Edit cart</a>
+</div>
 <div class="cart_title">
-<div class="cart_title_left"><img src="/wp-content/uploads/2016/11/buy-personal-alarm-checkout-cart-icon.png" alt="buy-personal-alarm-checkout-cart-icon" width="34" height="33" class="alignleft size-full wp-image-551" /><h2><strong><span style="color: #4a4c9a;">Your Cart: </span>Summary</strong></h2></div>
+
+<div class="cart_title_left">
+<h1 class="aa">Complete your order</h1>
+
+<!-- <a href="/cart/" class=""> < Back to Edit cart</a> -->
+
+
+<?php /*
+<img src="/wp-content/uploads/2016/11/buy-personal-alarm-checkout-cart-icon.png" alt="buy-personal-alarm-checkout-cart-icon" width="34" height="33" class="alignleft size-full wp-image-551" /><h2><strong><span style="color: #4a4c9a;">Your Cart: </span>Summary</strong></h2>
+*/ ?>
+
+</div>
+
+
 <div class="cart_title_right">
-<img src="/wp-content/uploads/2016/11/buy-personal-alarm-checkout-phone-icon.png" style="margin-top: 4px;" alt="buy-personal-alarm-checkout-phone-icon" width="53" height="39" class="alignleft size-full wp-image-553" />
+<img loading="lazy" src="/wp-content/uploads/2016/11/buy-personal-alarm-checkout-phone-icon.png" style="margin-top: 4px;" alt="buy-personal-alarm-checkout-phone-icon" width="53" height="39" class="alignleft size-full wp-image-553" />
 <div class="cart_contact_container"><a href="tel:1-877-801-7172"><span class="number">1-877-801-7172</span></a><p class="cart_order">ORDER BY PHONE</p></div>
 </div>
 
 
 </div>
+
+<?php /*
 
 <form class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 	<?php do_action( 'woocommerce_before_cart_table' ); ?>
@@ -179,6 +197,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 	</table>
 	<?php do_action( 'woocommerce_after_cart_table' ); ?>
 </form>
+<?php */ ?>
 
 <?php do_action( 'woocommerce_before_cart_collaterals' ); ?>
 
@@ -218,7 +237,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 	
 	<?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>
 	
-	<h3 id="order_review_heading"><?php esc_html_e( 'Your order', 'woocommerce' ); ?></h3>
+	<h3 id="order_review_heading"><?php esc_html_e( 'Your order details & payment options', 'woocommerce' ); ?></h3>
 	
 	<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
 
@@ -238,3 +257,8 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 <p><strong>Mobile Alarm</strong></p>
 <p>You should expect your Live Life Alarm to be shipped within 10-12 business days of your order, however, we will try our best to send your alarm sooner if we can.</p>
 </div>
+
+
+<style>
+
+</style>

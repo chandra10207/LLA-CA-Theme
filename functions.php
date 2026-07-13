@@ -61,7 +61,7 @@ function programming_option( $checkout ) {
 		$_product = $values['data'];
 		
 		if ( $_product->id === 1523 ) {
-			echo '<h2 style="display:block; clear:both; padding-top: 10px;"><strong><span style="color: #4a4c9a;">4GX Programming </span>Information</strong></h2>';
+			echo '<h2 style="display:block; clear:both; padding-top: 50px;"><strong><span style="color: #4a4c9a;">4GX Programming </span>Information</strong></h2>';
 			echo '<div class="checkout_title_line"></div>';
 			echo '<div class="progamming_container">'; 
 			echo '<img src="https://www.livelifealarms.ca/wp-content/uploads/2016/11/pendant-alarms-free-programming-teardrop.png" alt="pendant-alarms-free-programming-teardrop" width="105" height="122" class="alignright size-full wp-image-556" />';
@@ -72,7 +72,7 @@ function programming_option( $checkout ) {
 			echo '<div style="clear:both; height: 45px;"></div>';
 
 		} else if ( $_product->id === 6321 ) {
-			echo '<h2 style="display:block; clear:both; padding-top: 10px;"><strong><span style="color: #4a4c9a;">3G Programming </span>Information</strong></h2>';
+			echo '<h2 style="display:block; clear:both; padding-top: 50px;"><strong><span style="color: #4a4c9a;">3G Programming </span>Information</strong></h2>';
 			echo '<div class="checkout_title_line"></div>';
 			echo '<div class="progamming_container">'; 
 			echo '<img src="https://www.livelifealarms.ca/wp-content/uploads/2016/11/pendant-alarms-free-programming-teardrop.png" alt="pendant-alarms-free-programming-teardrop" width="105" height="122" class="alignright size-full wp-image-556" />';
@@ -83,12 +83,12 @@ function programming_option( $checkout ) {
 		} 
 		
 	}
-	echo '<img src="https://www.livelifealarms.ca/wp-content/uploads/2016/11/buy-personal-alarm-checkout-cart-icon.png" alt="buy-personal-alarm-checkout-cart-icon" width="34" height="33" class="alignleft size-full wp-image-551" />';
-	echo '<h2><strong><span style="color: #4a4c9a;">Your Order </span>Details</strong></h2>';
-	echo '<div class="checkout_title_line"></div>';
+	//echo '<img src="https://www.livelifealarms.ca/wp-content/uploads/2016/11/buy-personal-alarm-checkout-cart-icon.png" alt="buy-personal-alarm-checkout-cart-icon" width="34" height="33" class="alignleft size-full wp-image-551" />';
+	//echo '<h2><strong><span style="color: #4a4c9a;">Your Order </span>Details</strong></h2>';
+	//echo '<div class="checkout_title_line"></div>';
 
 }
-add_action( 'woocommerce_checkout_after_customer_details', 'programming_option' );
+add_action( 'woocommerce_after_checkout_form', 'programming_option' );
 
 
 add_filter( 'postmeta_form_limit', 'meta_limit_increase' );
@@ -468,4 +468,19 @@ function lla_register_custom_customer_order_email($emails)
     require_once get_stylesheet_directory() . '/woocommerce/emails/class-custom-customer-order-email.php';
     $emails['Canada_Strike_Email'] = new Custom_Customer_Order_Email();
     return $emails;
+}
+
+add_filter( 'woocommerce_ship_to_different_address_checked', '__return_false' );
+
+add_action( 'wp_enqueue_scripts', 'lla_disable_woocommerce_state_select2', 100 );
+function lla_disable_woocommerce_state_select2() {
+    // Only target the checkout page to avoid breaking admin areas
+    if ( is_checkout() ) {
+        if ( class_exists( 'woocommerce' ) ) {
+            wp_dequeue_style( 'select2' );
+            wp_deregister_style( 'select2' );
+            wp_dequeue_script( 'selectWoo' );
+            wp_deregister_script( 'selectWoo' );
+        }
+    }
 }

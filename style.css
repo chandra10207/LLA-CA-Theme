@@ -112,7 +112,14 @@ ORDER MOBILE ALARM
 .nav-tabs li a {border-top: none !important;}
 .wp-image-242 {margin-right: 30px !important;}
 .order_mobile_row2 {box-shadow: inset 0px 1px 6px #D3D2CC;}
-.order_mobile_add_cart_button .single_add_to_cart_button {background-size: 210px !important; margin-top: -6px !important; float: right; padding: 29px 100px !important; margin-left: 8px !important; border:none; box-shadow: none;}
+.order_mobile_add_cart_button .single_add_to_cart_button {
+	background-size: 210px !important; 
+	margin-top: -6px !important; 
+	float: right; 
+	padding: 29px 100px !important; 
+	margin-left: 8px !important; 
+	border:none; box-shadow: none;
+}
 .wp-image-736 {border-left: 1px solid #d8d4d1;}
 .template_ul.ca {width: 600px;}
 .postid-7922 #main {padding-top: 0px !important;}
@@ -266,13 +273,27 @@ CARER INFORMATION
 ===============*/
 /*---- ORDER MOBILE PAGE ----*/
 .woocommerce-container .catalog-ordering, .woocommerce-container .products.products-4 {display: none;}
-.woocommerce .cart .single_add_to_cart_button.wc-variation-selection-needed, .woocommerce .cart .button.single_add_to_cart_button {padding: 19px 90px !important; background-color: transparent !important; display: inline-block !important; color: transparent !important;}
+.woocommerce .cart .single_add_to_cart_button.wc-variation-selection-needed, .woocommerce .cart .button.single_add_to_cart_button {
+	padding: 19px 30px !important; 
+	/* background-color: transparent !important;  */
+	display: inline-block !important; 
+	font-weight: 600;
+	letter-spacing: 1px;
+	/* color: transparent !important; */
+}
 
 /*---- SINGLE PAGE ----*/
 .single-product .product_title.entry-title {font-size: 22px !important; font-weight: bold !important;}
-.single_add_to_cart_button {font-size: 1px !important; color: transparent !important; background-color: transparent !important;
-    background-image: url(/wp-content/uploads/2016/11/buy-personal-alarm-add-cart-button.png) !important;
-    padding: 20px 86px !important; background-size: 180px !important; background-repeat: no-repeat !important; transition: 1s !important}
+.single_add_to_cart_button {
+	/* font-size: 1px !important;  */
+	/* color: transparent !important;  */
+	/* background-color: transparent !important; */
+    /* background-image: url(/wp-content/uploads/2016/11/buy-personal-alarm-add-cart-button.png) !important; */
+    padding: 20px !important; 
+	background-size: 180px !important; 
+	background-repeat: no-repeat !important; 
+	transition: 1s !important
+}
 .single_add_to_cart_button:hover {transition: 1s !important; transform: scale(1.05) !important;}
 .woocommerce-tabs h3 {color: #4a4c9a !important; font-weight: bold !important; font-size: 20px !important; margin-bottom: 0 !important;}
 #review_form #submit {background: #525194 !important; background-color: #525194 !important; padding: 9px 45px !important; min-width: auto !important; border-radius: 30px !important;
@@ -285,7 +306,7 @@ CARER INFORMATION
 
 .shop_table td {padding: 15px 0 !important;}
 .woocommerce-checkout .woocommerce-message, .woocommerce-checkout .avada-myaccount-user, .woocommerce-checkout .wc-proceed-to-checkout .checkout-button {display: none !important;}
-.woocommerce-checkout #main {padding: 50px 0 50px !important;}
+.woocommerce-checkout #main {padding: 50px 10px 50px !important;}
 .checkout_container {width: 1024px; position: relative; margin: 0 auto;}
 .cart_title_left, .cart_title h2, .cart_contact_container {float: left;}
 .cart_title_right {float: right;}
@@ -306,8 +327,7 @@ CARER INFORMATION
 .checkout_title_line {background-color: #e0dede; height: 1px; margin-top: -8px; margin-bottom: 24px;}
 .woocommerce-checkout .checkout .col-1, .woocommerce-checkout .checkout .col-2 {width: 100% !important;}
 #billing_company_field {display: none;}
-#billing_email_field, #billing_state_field {width: 48%; float: left;}
-#billing_postcode_field {width: 48%; float: right;}
+
 .progamming_container {background-color: #F7F5F2; border: 9px solid #BFBCB5; padding: 55px 30px; font-weight: bold;}
 .progamming_container .wp-image-556 {margin-top: -22px;}
 .woocommerce-checkout-review-order tfoot th {padding-top: 15px !important;  padding-bottom: 0 !important;}
@@ -354,14 +374,16 @@ CARER INFORMATION
 .images .order_mobile_row1 .ms-thumb-frame {width: 165px !important;}
 #product-1523 p, #product-20195 p {text-align: justify;}
 .postid-1523 .order_mobile_row2 .tab-pane, .postid-6168 .order_mobile_row2 .tab-pane, .postid-6321 .order_mobile_row2 .tab-pane, .postid-20195 .tab-pane {min-height: 603px;}
-.postid-1523 .variations .label, .postid-6168 .variations .label, .postid-6321 .variations .label, .postid-14116 .variations .label {display: none;}
+/* .postid-1523 .variations .label, .postid-6168 .variations .label, .postid-6321 .variations .label, .postid-14116 .variations .label {
+	display: none
+	;} */
 .continue-shopping-btn a, .woocommerce .button {background-color: #6F6EB9 !important; float: left !important; color: white !important; font-family: PT Sans !important; padding: 8px 25px !important; border-radius: 30px !important; text-transform: uppercase !important;}
 .continue-shopping-btn a:hover, .woocommerce .button:hover {color: #525194 !important;}
 .woocommerce .cart .button {padding: 13px 25px !important;}
 .image_removeonDesktop {display: none;}
 
 /*---- CART PAGE ----*/
-.woocommerce-cart #main {padding: 50px !important;}
+.woocommerce-cart #main {padding: 50px 10px !important;}
 .shipping-coupon {display: none;}
 
 /*==============
@@ -786,3 +808,275 @@ h2.entry-title {font-size: 22px !important; margin-bottom: 5px !important; color
 	.customer_r1_col-2 {font-size: 13px !important;}
 }
 
+.hide-in-desktop
+ {
+	display: none;
+}
+
+.hide-in-mobile {
+	display: block;
+}
+
+@media only screen and (max-width: 768px) {
+	.hide-in-desktop {
+		display: block;
+	}
+	.hide-in-mobile,
+	.home_row2 {
+		display: none;
+	}
+	
+	#rev_slider_1_1_wrapper .tp-bullets > .tp-bullet:nth-child(3) {
+		display: none !important;
+	}
+	
+	#rev_slider_1_1_wrapper .tp-bullets > .tp-bullet:last-child {
+		 left: 45px !important;
+	}
+	/*
+	#rev_slider_1_1_wrapper [data-key ="rs-2"] {
+		display: none !important;
+	} */
+	
+	/*Home Page*/
+	/*centering images  */
+	.wp-image-19950,
+	.wp-image-1437,
+	.wp-image-1436,
+	.wp-image-831 {
+		display: block !important;
+		margin: auto !important;
+		float: none;
+	}
+
+	.footer_col3 {
+		width: 100%;
+		border: none;
+		padding: 0 0px !important;
+	}
+	
+}
+
+@media only screen and (max-width: 667px) {
+.wp-image-199 {
+    float: none !important;
+    margin-left: 0 !important;
+    margin-bottom: 15px;
+}
+}
+
+.postid-20195 .product_title, .postid-20195  div[itemprop="offers"], .postid-20195  .product-border, .postid-20195  .product_meta,
+.postid-20195  .woocommerce-Price-amount.amount,
+.postid-20195 .woocommerce-tabs.wc-tabs-wrapper
+{
+	display: none;
+}
+/* Hide Watch*/
+.order_vertical_line {
+    background-color: #d9d6cf;
+    width: 1px;
+    height: 65px;
+    float: left;
+    margin: 0 24px;
+}
+
+.product .summary .cart .quantity {
+	border: 1px solid #e0dede !important;
+}
+
+.postid-20195 .summary .variations_form.cart {
+	margin-top: 0px !important;
+}
+
+
+@media only screen and (max-width: 1250px) {
+	.lla_mobile .variations_form.cart {
+		width: 100% !important;
+		align-items: flex-start;
+	}
+	.woocommerce .cart .single_add_to_cart_button.wc-variation-selection-needed, .woocommerce .cart .button.single_add_to_cart_button {
+		margin-left: -10px;
+	}
+	.woocommerce-product-details__short-description {
+		display: grid;
+	}
+}
+
+@media only screen and (max-width:1024px) {
+	.lla_mobile_images {
+		width: 100% !important;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.single_variation_wrap .variations_button {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.variations tr:last-child {
+		position: absolute;
+		right: 0;
+	}
+	.lla_mobile .variations_form.cart {
+		width: calc(100vw - 15%) !important;
+		position: relative;
+	}
+}
+.fusion-megamenu-holder {
+	border-top: none !important;
+	margin-top: 14px !important;
+}
+
+.fusion-megamenu-holder li {
+	margin-bottom: 0px !important;
+}
+
+.fusion-menu-cart-link a:before {
+	  position: absolute;
+    margin-left: -15px;
+    line-height: inherit;
+}
+.fusion-menu-cart-checkout-link, .fusion-menu-cart-link {
+	padding: 5px 2px !important;
+}
+
+.form-row.form-row-wide.mailchimp-newsletter {
+	display: none !important;
+}
+
+.page-id-20799 .setup_form_container {
+	width: auto;
+}
+
+@media only screen and (max-width: 930px) {
+	.fusion-gallery-layout-grid.fusion-gallery-1 {
+		display: grid;
+		grid-template-columns: 50% 50%;
+		height: unset !important;
+	}
+	.fusion-gallery-layout-grid .fusion-gallery-column-4.hover-type-none {
+		position: unset !important;
+		margin-bottom: 20px;
+	}
+}
+
+.grecaptcha-badge {
+	display: none !important;
+}
+
+.setup_form_container .button-submit {
+	min-height: 35px;
+	min-width:80px;
+	line-height:35px;
+}
+
+.fusion-layout-column .fusion-column-wrapper {
+	border: none !important;
+}
+
+/*Comparision Table*/
+.compare-table div .fusion_builder_column_1_3 {
+	margin-bottom:0px !important;
+}
+.compare-table div .fusion_builder_column_1_3:nth-child(n+4) {
+	border-top: 1px solid #eaeaea;
+	margin-bottom:0px !important;
+	padding: 15px 0px 0px 0px;
+}
+
+.wc-block-components-notice-banner.is-success {
+	display: none;
+}
+
+#account_unique_number_field {
+	display: none;
+}
+
+.logged-in #account_unique_number_field {
+	display: block;
+}
+
+
+/*4G upgrade offer*/
+
+
+body.postid-24433 .post-content.woocommerce-product-details__short-description {
+    overflow: hidden;
+}
+
+
+
+@media only screen and (min-width: 1249px) {
+body.postid-24433 form.variations_form.cart {
+    position: relative;
+    top: -30px;
+}
+
+#billing_email_field, #billing_state_field {width: 48%; float: left;}
+#billing_postcode_field {width: 48%; float: right;}
+}
+
+@media only screen and (max-width: 1249px) {
+    .lla_mobile .variations_form.cart, .lla_mobile .single_variation_wrap {
+        float: none;
+        margin-top: 6px !important;
+    }
+}
+
+form.cart .variations tr{
+	display: flex;
+	flex-direction: column;
+}
+
+.woocommerce .cart .button.single_add_to_cart_button:hover{
+	background-color:#e40030 !important ;
+	color: #fff !important;
+}
+
+.single_variation_price_reset .reset_variations{
+	display: none !important;
+}
+.variations .label {
+	font-weight: 600 !important;
+	font-size: 1rem !important;
+	text-align: left;
+}
+
+.woocommerce .cart-collaterals .checkout-button{
+	background-color:#e40030 !important ;
+	color: #fff !important;
+
+}
+
+.checkout .payment_methods li {
+    /* border: 2px solid #4a4c9a; */
+	/* padding: 20px 0; */
+}
+.payment_methods li label {
+    font-weight: 600;
+}
+form.checkout li > label,
+form.checkout p.form-row > label {
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+form.checkout p.form-row > label .woocommerce-terms-and-conditions-checkbox-text{
+	font-weight: 500;
+    font-size: 1rem;
+}
+
+form.checkout p.form-row{
+	margin-bottom: 20px !important;
+}
+
+
+.avada-woo-one-page-checkout .woocommerce .checkout #customer_details .col-1, 
+.avada-woo-one-page-checkout .woocommerce .checkout #customer_details .col-2,
+.woocommerce-MyAccount-content, .woocommerce-content-box{
+    padding: 30px 15px !important;
+}
+
+#shipping_method li{
+    color: green;
+	text-align: right;
+}
