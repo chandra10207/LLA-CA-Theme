@@ -46,8 +46,8 @@ sup {font-size: 10px;}
 .fusion-secondary-main-menu {border-bottom: 9px solid #959188 !important;}
 .fusion-main-menu {overflow: visible !important;}
 #menu-main-menu, #menu-main-menu-1 {border-bottom: 9px solid #bfbcb5; margin-bottom: -9px; margin-left: -6px; margin-right: -6px;}
-#menu-main-menu li, #menu-main-menu-1 li {padding: 14px 0px !important; margin-bottom: -9px; border-bottom: 9px solid transparent;}
-#menu-main-menu li a, #menu-main-menu-1 a {border-right: 1px solid #d9d6cf; height: 28px; line-height: 28px; padding: 0 13px;}
+#menu-main-menu li, #menu-main-menu-1 li {padding: 0px !important; margin-bottom: -9px; border-bottom: 9px solid transparent;}
+#menu-main-menu li a, #menu-main-menu-1 a {border-right: 1px solid #d9d6cf; height: auto; line-height: 28px; padding: 14px 13px; display:block;}
 #menu-main-menu li:first-child a, #menu-main-menu-1 li:first-child a {padding-left: 0;}
 #menu-main-menu li:last-child a, #menu-main-menu-1 li:last-child a {padding-right: 5px; border-right: none;}
 .menu-item-38 {margin-left: -20px !important;}
@@ -69,9 +69,10 @@ li.fusion-custom-menu-item {margin-right: -20px;}
 #menu-main-menu ul.fusion-megamenu li, .fusion-sticky-menu #menu-main-menu-1 ul.fusion-megamenu li {border-bottom: none !important; padding: 0 !important;}
 .fusion-megamenu-title {padding: 0 !important;}
 .fusion-megamenu li a {border-right: none !important; padding: 15px !important; text-align: center; font-family: Bitter !important;}
-.fusion-megamenu-title a {text-align: center; padding: 17px 0; font-family: Bitter !important; font-size: 14px !important;}
+.fusion-megamenu-title a {text-align: center; padding: 17px 0; font-family: Bitter !important; font-size: 16px !important; font-weight: 500 !important;}
 .fusion-megamenu li a:hover, .fusion-megamenu li.current-menu-item a {color: #e40030; background-color: white;}
-
+ul#mobile-menu-main-menu{padding: 20px 0 40px 0; min-height: 90vh;background: #f9f9f9;}
+.fusion-mobile-menu-text-align-left .fusion-open-submenu {background: #fff;padding-left: 20px;}
 /*==============
      HOME
 ===============*/
