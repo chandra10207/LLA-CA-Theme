@@ -29,10 +29,13 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 ?>
 
 <?php do_action( 'woocommerce_before_cart' ); ?>
-<div class="aa" style="display: block; overflow: hidden;">
 
-<a href="/cart/" class="button wc-forward" style="margin-bottom: 20px;">Edit cart</a>
+<?php /* ?>
+<div class="aa" style="display: block; overflow: hidden;">
+	<a href="/cart/" class="button wc-forward" style="margin-bottom: 20px;">Edit cart</a>
 </div>
+<?php */ ?>
+
 <div class="cart_title">
 
 <div class="cart_title_left">
@@ -53,10 +56,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 <div class="cart_contact_container"><a href="tel:1-877-801-7172"><span class="number">1-877-801-7172</span></a><p class="cart_order">ORDER BY PHONE</p></div>
 </div>
 
-
 </div>
-
-<?php /*
 
 <form class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 	<?php do_action( 'woocommerce_before_cart_table' ); ?>
@@ -197,7 +197,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 	</table>
 	<?php do_action( 'woocommerce_after_cart_table' ); ?>
 </form>
-<?php */ ?>
+
 
 <?php do_action( 'woocommerce_before_cart_collaterals' ); ?>
 
