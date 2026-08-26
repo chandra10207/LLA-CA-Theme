@@ -47,7 +47,7 @@ sup {font-size: 10px;}
 .fusion-main-menu {overflow: visible !important;}
 #menu-main-menu, #menu-main-menu-1 {border-bottom: 9px solid #bfbcb5; margin-bottom: -9px; margin-left: -6px; margin-right: -6px;}
 #menu-main-menu li, #menu-main-menu-1 li {padding: 0px !important; margin-bottom: -9px; border-bottom: 9px solid transparent;}
-#menu-main-menu li a, #menu-main-menu-1 a {border-right: 1px solid #d9d6cf; height: auto; line-height: 28px; padding: 14px 13px; display:block;}
+#menu-main-menu li a, #menu-main-menu-1 a {border-right: 1px solid #d9d6cf; height: auto; min-height: 56px; line-height: 28px; padding: 14px 13px; display:block;}
 #menu-main-menu li:first-child a, #menu-main-menu-1 li:first-child a {padding-left: 0;}
 #menu-main-menu li:last-child a, #menu-main-menu-1 li:last-child a {padding-right: 5px; border-right: none;}
 .menu-item-38 {margin-left: -20px !important;}
@@ -379,7 +379,7 @@ CARER INFORMATION
 	display: none
 	;} */
 .continue-shopping-btn a, .woocommerce .button {background-color: #6F6EB9 !important; float: left !important; color: white !important; font-family: PT Sans !important; padding: 8px 25px !important; border-radius: 30px !important; text-transform: uppercase !important;}
-.continue-shopping-btn a:hover, .woocommerce .button:hover {color: #525194 !important;}
+.continue-shopping-btn a:hover, .woocommerce .button:hover {color: #fff !important;    background-color: #e40030 !important;}
 .woocommerce .cart .button {padding: 13px 25px !important;}
 .image_removeonDesktop {display: none;}
 
@@ -1105,6 +1105,18 @@ form.checkout p.form-row{
 }
 
  .shop_table_responsive.woocommerce-cart-form__contents .product-name {font-weight: 600 !important;}
+
+
+#main .woocommerce .cart-collaterals .checkout-button{
+	display: block;
+	margin: 20px 0 30px 0 !important;
+	width: 100%;
+	font-size: 16px;
+    font-weight: 600;
+    padding: 20px !important;
+	text-align: center;
+	letter-spacing: 0.5px;
+}
 
 @media only screen and (max-width: 800px) {
     .shop_table_responsive.woocommerce-cart-form__contents tbody tr.cart_item {

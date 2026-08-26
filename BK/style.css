@@ -1081,3 +1081,80 @@ form.checkout p.form-row{
     color: green;
 	text-align: right;
 }
+
+#main .woocommerce-cart-form .quantity{
+	
+    border: 1px solid #bfbcb5 !important;
+}
+
+#main .woocommerce-cart-form .quantity .minus, 
+#main .woocommerce-cart-form  .quantity .plus {
+    background-color: #ffffff !important;
+    font-size: 20px !important;
+    color: #6f6eb9 !important;
+}
+
+
+ .shop_table_responsive.woocommerce-cart-form__contents .product-remove > a {
+	background: red;
+    color: #fff !important;
+    line-height: 1;
+    padding: 0px 5px;
+    border-radius: 14px;
+    margin-right: 8px;
+}
+
+ .shop_table_responsive.woocommerce-cart-form__contents .product-name {font-weight: 600 !important;}
+
+@media only screen and (max-width: 800px) {
+    .shop_table_responsive.woocommerce-cart-form__contents tbody tr.cart_item {
+        background: #f5f5f5;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+
+	.shop_table_responsive.woocommerce-cart-form__contents .product-thumbnail {
+		/* max-width: 30%;
+		float: left; */
+		max-width: 100px !important;
+    }
+
+	body.woocommerce-checkout .shop_table_responsive.woocommerce-cart-form__contents .product-thumbnail {
+		/* max-width: 30%;
+		float: left; */
+		max-width: 100% !important;
+		width: 100% !important;
+    }
+		body.woocommerce-checkout .shop_table_responsive.woocommerce-cart-form__contents .product-thumbnail img{
+		max-width: 100px !important;
+		width: 100% !important;
+    }
+
+	    .shop_table_responsive.woocommerce-cart-form__contents .product-name {
+        /* max-width: 65%;
+		float: right; */
+		pointer-events: none !important;
+		/* padding-top: 30px !important; */
+        /* text-align: left; */
+    }
+	
+	.shop_table_responsive.woocommerce-cart-form__contents .product-remove {
+			top: 15px !important;
+	}
+
+	.shop_table td {
+		padding: 5px 0 !important;
+	}
+
+    .shop_table_responsive.woocommerce-cart-form__contents tbody tr:last-child {
+        padding: 5px 0 !important;
+		overflow: hidden;
+
+    }
+	 body.woocommerce-checkout .shop_table_responsive.woocommerce-cart-form__contents tbody tr:last-child td.actions {
+		overflow: hidden;
+    }
+
+}
