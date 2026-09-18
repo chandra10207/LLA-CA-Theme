@@ -72,7 +72,7 @@ function programming_option( $checkout ) {
 			echo '<div style="clear:both; height: 45px;"></div>';
 
 		} else if ( $_product->id === 6321 ) {
-			echo '<h2 style="display:block; clear:both; padding-top: 50px;"><strong><span style="color: #4a4c9a;">3G Programming </span>Information</strong></h2>';
+			echo '<h2 style="display:block; clear:both; padding-top: 50px;"><strong><span style="color: #4a4c9a;">Programming </span>Information</strong></h2>';
 			echo '<div class="checkout_title_line"></div>';
 			echo '<div class="progamming_container">'; 
 			echo '<img src="https://www.livelifealarms.ca/wp-content/uploads/2016/11/pendant-alarms-free-programming-teardrop.png" alt="pendant-alarms-free-programming-teardrop" width="105" height="122" class="alignright size-full wp-image-556" />';

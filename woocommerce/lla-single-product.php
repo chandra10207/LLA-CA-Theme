@@ -67,7 +67,7 @@ get_header( 'shop' ); ?>
 <li>You&nbsp;can call a nominated&nbsp;contact by pressing the side talk button at any time.</li>
 <li>You can speak and listen to calls through the mobile alarms&nbsp;built-in microphone and speakerphone.</li>
 <li>You can include ‘911’ as one of your&nbsp;emergency contacts.</li>
-<li>Easy to recharge in just 30&nbsp;minutes by placing&nbsp;into the charging station. Battery lasts upto 7 days.</li>
+<li>Fast-charging in just under 30 minutes by placing into the charging station. Battery lasts up to 5 days.</li>
 </ul>
 </div>
 <div class="order_mobile_r2_tab_right" style="line-height: 25px; margin-top: -14px;">

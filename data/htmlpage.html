@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Compare mobile medical alert systems by coverage, fall detection, battery life, contracts, and annual cost.">
+  <meta property="og:title" content="Medical Alerts Comparison">
+  <meta property="og:description" content="Compare mobile medical alert systems by coverage, safety features, and cost.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Medical Alerts Comparison</title>
+  <style>
+    :root {
+      --background: #fcfcfc;
+      --foreground: #262b2e;
+      --primary: #154675;
+      --card: #ffffff;
+      --table-header: #303435;
+      --table-stripe: #dceff5;
+      --table-grid: #bfd0d7;
+      --table-header-foreground: #ffffff;
+      --brand-alert: #ef3157;
+      --radius: 6px;
+    }
+    * { box-sizing: border-box; }
+    html { color-scheme: light; }
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--foreground);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    main { min-height: 100vh; padding: 8px; }
+    section { width: 100%; max-width: 1170px; margin: 0 auto; }
+    h1 { margin: 0 0 12px; font-size: 27px; font-weight: 400; line-height: 1; }
+    h1 span { color: var(--primary); }
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+    }
+    .comparison-table { width: 100%; table-layout: fixed; border-collapse: collapse; border: 2px solid var(--foreground); font-size: 12px; line-height: 1.12; }
+    .comparison-table thead { background: var(--table-header); color: var(--table-header-foreground); }
+    .comparison-table th, .comparison-table td {
+      border-right: 1px solid var(--table-grid); border-bottom: 1px solid var(--table-grid);
+      padding: 10px 6px; text-align: center; vertical-align: middle; overflow-wrap: break-word;
+    }
+    .comparison-table thead th { height: 48px; padding: 7px 5px; font-weight: 400; vertical-align: top; }
+    .comparison-table thead th:first-child { width: 121px; padding-left: 13px; text-align: left; font-weight: 700; }
+    .comparison-table tbody tr { height: 87px; }
+    .comparison-table tbody tr:nth-child(even) { background: var(--table-stripe); }
+    .comparison-table tbody th { padding-left: 9px; color: var(--primary); font-size: 12px; font-weight: 700; line-height: 1.15; text-align: left; }
+    .comparison-table .featured-row th { color: var(--brand-alert); }
+    .alarm-mark { display: block; width: 32px; height: 30px; margin: 0 0 3px 1px; color: var(--brand-alert); }
+    .alarm-mark svg { display: block; width: 100%; height: 100%; }
+    .alarm-mark-cross { fill: #ffffff; }
+    @media (max-width: 760px) {
+      main { padding: 10px 8px; }
+      h1 { font-size: 25px; }
+      .comparison-table, .comparison-table tbody, .comparison-table tr, .comparison-table th, .comparison-table td { display: block; }
+      .comparison-table { border: 0; font-size: 14px; }
+      .comparison-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; clip-path: inset(50%); }
+      .comparison-table tbody { display: grid; gap: 14px; }
+      .comparison-table tbody tr, .comparison-table tbody tr:nth-child(even) { height: auto; overflow: hidden; border: 1px solid var(--table-grid); background: var(--card); border-radius: var(--radius); }
+      .comparison-table tbody th { display: flex; min-height: 58px; align-items: center; gap: 10px; padding: 12px 14px; border: 0; background: var(--table-header); color: var(--table-header-foreground); font-size: 15px; }
+      .comparison-table .featured-row th { color: var(--table-header-foreground); }
+      .alarm-mark { flex: 0 0 auto; margin: 0; }
+      .comparison-table td { display: grid; grid-template-columns: minmax(112px, 43%) 1fr; min-height: 43px; align-items: center; gap: 12px; padding: 9px 12px; border-right: 0; text-align: left; }
+      .comparison-table td:nth-of-type(even) { background: var(--table-stripe); }
+      .comparison-table td::before { content: attr(data-label); color: var(--primary); font-size: 12px; font-weight: 700; line-height: 1.2; }
+      .comparison-table td:last-child { border-bottom: 0; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section aria-labelledby="comparison-title">
+      <h1 id="comparison-title">Medical Alerts <span>Comparison</span></h1>
+      <table class="comparison-table">
+        <caption class="sr-only">Features and costs of seven mobile medical alert providers</caption>
+        <thead><tr id="column-headings"><th scope="col">Alarm</th></tr></thead>
+        <tbody id="comparison-body"></tbody>
+      </table>
+    </section>
+  </main>
+  <script>
+    const columns = [
+      ["range", "Button range"], ["texts", "Texts & calls"], ["monitoring", "Monitoring center"],
+      ["handsFree", "Hands free 2-way"], ["gps", "GPS location"], ["fallDetection", "Fall detection"],
+      ["familyAlarm", "Family can call alarm"], ["battery", "Battery Life"], ["shower", "Use in shower"],
+      ["voicePrompts", "Smart voice prompts"], ["adjustable", "Adjustable setting by user"],
+      ["contract", "Contract details"], ["monthly", "Monthly charges"], ["firstYear", "Total 1st year cost"],
+      ["secondYear", "Total 2nd year cost"]
+    ];
+    const shared = { range: "Nation wide.", texts: "No", monitoring: "Yes", handsFree: "Yes", gps: "Yes. Sent only to call center.", fallDetection: "Yes", familyAlarm: "No", shower: "Yes", voicePrompts: "No", adjustable: "No", contract: "No contract" };
+    const alerts = [
+      { ...shared, alarm: "LIVELIFE ALARMS", featured: true, texts: "Yes", monitoring: "No. Calls up to 6 contacts directly. Can include 911.", gps: "Yes. Sent directly to you.", familyAlarm: "Yes", battery: "7-12 days", voicePrompts: "Yes", adjustable: "Yes", monthly: "None", firstYear: "$487", secondYear: "$75" },
+      { ...shared, alarm: "PHILIPS LIFELINE", battery: "5-7 days", monthly: "$69.99", firstYear: "$840", secondYear: "$840" },
+      { ...shared, alarm: "TELUS LIVING WELL", battery: "36 hours", monthly: "$55 with $80 setup fee", firstYear: "$660", secondYear: "$740" },
+      { ...shared, alarm: "LIFE ASSURE", battery: "2 days", monthly: "$69.95", firstYear: "$839", secondYear: "$839" },
+      { ...shared, alarm: "BELL", battery: "2-3 days", contract: "6 month term", monthly: "$57.99 with $99 setup fee", firstYear: "$795", secondYear: "$695" },
+      { ...shared, alarm: "MEDICAL ALERT (BY CONNECT AMERICA)", battery: "3-5 days", voicePrompts: "Only for battery", monthly: "$47.95", firstYear: "$575", secondYear: "$575" },
+      { ...shared, alarm: "GALAXY MEDICAL ALERT", battery: "2 days", monthly: "$54.95", firstYear: "$659", secondYear: "$659" }
+    ];
+    const mark = '<span class="alarm-mark" aria-hidden="true"><svg viewBox="0 0 32 30"><path d="M16 28C13 24.6 3 18.4 3 10.4 3 5.8 6.3 3 10.2 3c2.3 0 4.5 1.2 5.8 3.1C17.3 4.2 19.5 3 21.8 3 25.7 3 29 5.8 29 10.4c0 8-10 14.2-13 17.6Z" fill="currentColor"/><path d="M14 8h4v5h5v4h-5v5h-4v-5H9v-4h5V8Z" class="alarm-mark-cross"/></svg></span>';
+    const escapeHtml = (value) => String(value).replace(/[&<>'"]/g, character => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" })[character]);
+    document.getElementById("column-headings").insertAdjacentHTML("beforeend", columns.map(([, label]) => `<th scope="col">${escapeHtml(label)}</th>`).join(""));
+    document.getElementById("comparison-body").innerHTML = alerts.map(alert => `<tr${alert.featured ? ' class="featured-row"' : ""}><th scope="row">${alert.featured ? mark : ""}<span>${escapeHtml(alert.alarm)}</span></th>${columns.map(([key, label]) => `<td data-label="${escapeHtml(label)}">${escapeHtml(alert[key])}</td>`).join("")}</tr>`).join("");
+  </script>
+</body>
+</html>
