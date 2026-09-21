@@ -341,7 +341,7 @@ CARER INFORMATION
 .payment_info h4 {color: #e40030 !important; font-size: 18px !important; font-weight: bold !important;}
 .payment_info ul {margin-top: 0 !important;}
 .payment_info ul li {margin-bottom: 0 !important;}
-.payment_box {padding-top: 0 !important; padding-bottom: 0 !important;}
+.payment_box {margin-bottom: 20px;}
 #place_order {background-color: #e41641 !important; border-radius: 30px !important; padding: 18px 35px!important; font-size: 18px !important;}
 #place_order:hover {background-color: #c51439 !important;}
 .form-row.terms.wc-terms-and-conditions {clear: both;}
@@ -1169,4 +1169,47 @@ form.checkout p.form-row{
 		overflow: hidden;
     }
 
+}
+
+
+.wp-block-woocommerce-checkout p {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#add_payment_method #payment ul.payment_methods li, 
+.woocommerce-cart #payment ul.payment_methods li, 
+.woocommerce-checkout #payment ul.payment_methods li {
+   font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.woocommerce-checkout #payment ul.payment_methods li {
+    border: 2px solid #BFBCB5 ;
+    margin-bottom: 20px;
+    padding: 5px 1rem;
+    border-radius:10px;
+}
+
+.woocommerce-checkout #payment .payment_methods li.wc_payment_method:has(input[name="payment_method"]:checked) {
+    border-color: #6F6EB9;
+    background: #fff;
+}
+
+.woocommerce-checkout #payment ul.payment_methods li label {
+    min-width: 80%;
+    padding: 10px 0;
+    display: inline-flex;
+}
+
+ dl.variation dt{
+    display: none !important;
+ }
+
+ body.woocommerce-checkout .select-arrow
+ {
+    
+    height: 38px !important;
+    width: 38px !important;
+    line-height: 38px !important;
 }
